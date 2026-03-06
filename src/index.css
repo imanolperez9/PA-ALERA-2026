@@ -1,1 +1,11 @@
 @import "tailwindcss";
+@layer base {
+  button {
+    @apply cursor-pointer transition-all duration-200 active:scale-95;
+  }
+  
+  /* Para que cuando pases el mouse se aclare un poquito el color */
+  button:hover {
+    @apply opacity-90;
+  }
+}

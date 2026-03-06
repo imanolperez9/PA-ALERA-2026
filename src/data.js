@@ -1,55 +1,68 @@
 // src/data.js
 const imagenes = import.meta.glob('./img/*.{png,jpg,jpeg,webp}', { eager: true });
 
-// --- AQUÍ ASIGNÁS EL PRECIO A CADA NOMBRE DE ARCHIVO ---
 const listaPrecios = {
+  // HUGGIES
+"huggiesRN.jpeg": 7500,
+"huggiesP.jpeg": 7800,
+ "huggiesP50.jpeg": 3000,
   "huggiesG.jpeg": 8500,
- " huggiesM-GSPLASH.jpeg": 1000,
+  "huggiesM-GSPLASH.jpeg": 1000,
   "huggiesM.jpeg": 8200,
   "huggiesM68.jpeg" : 2000,
-  "huggiesP.jpeg": 7800,
-  "huggiesP50.jpeg": 3000,
-  "huggiesRN.jpeg": 7500,
+  
+ 
+  
   "huggiesXXG.jpeg": 9000,
   "huggiesXXXG.jpeg": 9500,
+// PAMPERS
+"pampersRN.jpeg": 7600,
+"pampersRN36.jpeg": 8900,
+  
 
-  
-  "pampersGSPLASH.jpeg": 10500,
+
   "pampersP-MSPLASH.jpeg": 5000,
-  "pampersRN.jpeg": 7600,
-  "pampersRN36.jpeg": 8900,
+  "pampersGSPLASH.jpeg": 10500,
   "pampersXGSPLASH.jpeg": 8000,
-  
-  
-  // Agregá los que falten siguiendo este formato exacto
+  // BABYSEC
+
+
+
+
+  //ESTRELLA
+};
+
+// --- EDITÁ ACÁ LOS NOMBRES QUE QUIERAS CAMBIAR ---
+const nombresAMano = {
+  "huggiesG.jpeg": "Huggies Classic G x 40",
+  "huggiesM-GSPLASH.jpeg": "Huggies Splashers Talle M",
+  "huggiesM68.jpeg": "Huggies Flexi Comfort M x 68",
+  "pampersRN36.jpeg": "Pampers RN Confort x 36",
+  // Podés seguir agregando todos los que necesites
 };
 
 export const productos = Object.entries(imagenes).map(([ruta, modulo], index) => {
-  const nombreArchivo = ruta.replace('./img/', ''); // Ejemplo: "huggiesG.jpeg"
+  const nombreArchivo = ruta.replace('./img/', ''); 
   
-  // Limpiamos el nombre para mostrarlo bonito (ej: de "huggiesG.jpeg" a "Huggies G")
-  const nombreParaMostrar = nombreArchivo
-    .replace('.jpeg', '')
-    .replace('.jpg', '')
-    .replace(/([A-Z])/g, ' $1') // Separa mayúsculas: huggiesG -> huggies G
-    .trim();
+  // Si existe en nombresAMano usa ese, sino limpia el nombre del archivo
+  const nombreLimpio = nombresAMano[nombreArchivo] || 
+    nombreArchivo.replace(/\.(jpeg|jpg|png|webp)$/, '').replace(/([A-Z])/g, ' $1').trim();
 
-  // Buscamos el precio en nuestra lista. Si no está, pone 0 por defecto.
-  const precioFinal = listaPrecios[nombreArchivo] || 0;
+  const precioTarjeta = listaPrecios[nombreArchivo] || 0;
+  const precioEfectivo = Math.round(precioTarjeta * 0.90);
 
-  // Detectar marca
   let marca = "Otras";
-  if (nombreArchivo.toLowerCase().includes('huggies')) marca = "Huggies";
-  if (nombreArchivo.toLowerCase().includes('pampers')) marca = "Pampers";
- if (nombreArchivo.toLowerCase().includes('babysec')) marca = "babysec";
- if (nombreArchivo.toLowerCase().includes('estrella')) marca = "estrella";
-
- 
+  const archivoLower = nombreArchivo.toLowerCase();
+  if (archivoLower.includes('huggies')) marca = "Huggies";
+  else if (archivoLower.includes('pampers')) marca = "Pampers";
+  else if (archivoLower.includes('babysec')) marca = "Babysec";
+  else if (archivoLower.includes('estrella')) marca = "Estrella";
 
   return {
     id: index + 1,
-    nombre: nombreParaMostrar.toUpperCase(),
-    precio: precioFinal,
+    nombre: nombreLimpio.toUpperCase(),
+    precioEfectivo: precioEfectivo,
+    precioTarjeta: precioTarjeta,
     imagen: modulo.default,
     marca: marca
   };
