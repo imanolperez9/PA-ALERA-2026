@@ -133,6 +133,9 @@ const listaPrecios = {
   "estrella xg x52.webp":21000,
   "estrella xxg x34.webp":13000,
   "estrella xxg x50.webp":21000,
+  "estrella j x30.webp":13000,
+  "estrella j x50.webp":21000,
+
 
   
 
