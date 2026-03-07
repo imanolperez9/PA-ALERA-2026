@@ -151,6 +151,15 @@ const listaPrecios = {
 "pm pezonera nuk.webp":18000,
 "pm pezonera chicco.webp":20000,
 
+
+// algodon
+"algodon doncella x500.webp":5000,
+"algodon estrella discos.webp":3000,
+"algodon estrella precortado.webp":2000,
+"algodon estrella x140.webp":2000,
+"algodon estrella x300.webp":4000,
+
+
   
 
 
@@ -205,6 +214,9 @@ export const productos = Object.entries(imagenes).map(([ruta, modulo], index) =>
   }
  if (archivoLower.includes('pm')) {
     marca = "Para mama"; 
+  } 
+  if (archivoLower.includes('algodon')) {
+    marca = "Algodones"; 
   } 
 
   // Función interna para determinar el orden de los talles
