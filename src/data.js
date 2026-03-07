@@ -137,6 +137,20 @@ const listaPrecios = {
   "estrella j x50.webp":21000,
 
 
+
+  // oleos
+
+  "oleo estrella x500.jpg":7000,
+  "oleo estrella x950.webp":10000,
+
+
+  //para mama
+"pm aposito post parto.webp":3000,
+"pm protector mamario.webp": 3000,
+"pm toallitas fem.webp":2000,
+"pm pezonera nuk.webp":18000,
+"pm pezonera chicco.webp":20000,
+
   
 
 
@@ -148,6 +162,12 @@ const nombresAMano = {
   "huggiesM-GSPLASH.jpeg": "Huggies Splashers Talle M",
   "huggiesM68.jpeg": "Huggies Flexi Comfort M x 68",
   "pampersRN36.jpeg": "Pampers RN Confort x 36",
+  "pm aposito post parto.webp":"aposito post parto",
+"pm protector mamario.webp": "protector mamario",
+"pm toallitas fem.webp":"toallitas",
+"pm pezonera nuk.webp":"pezonera nuk",
+"pm pezonera chicco.webp":"pezonera chicco",
+  
   // Podés seguir agregando todos los que necesites
 };
 
@@ -165,12 +185,27 @@ export const productos = Object.entries(imagenes).map(([ruta, modulo], index) =>
   const precioTarjeta = listaPrecios[nombreArchivo] || 0;
   const precioEfectivo = Math.round(precioTarjeta * 0.90);
 
+ // DENTRO DE src/data.js (en el .map)
+
   let marca = "Otras";
   const archivoLower = nombreArchivo.toLowerCase();
-  if (archivoLower.includes('huggies')) marca = "Huggies";
-  else if (archivoLower.includes('pampers')) marca = "Pampers";
-  else if (archivoLower.includes('babysec')) marca = "Babysec";
-  else if (archivoLower.includes('estrella')) marca = "Estrella";
+
+  // 1. PRIMERO preguntamos si es óleo. 
+  // Si es "oleo estrella", entrará aquí y la marca será "Oleo".
+ 
+  // 2. RECIÉN DESPUÉS preguntamos por las marcas de pañales
+   if (archivoLower.includes('huggies')) {
+    marca = "Huggies";
+  }  if (archivoLower.includes('pampers')) {
+    marca = "Pampers";
+  }  if (archivoLower.includes('babysec')) {
+    marca = "Babysec";
+  }  if (archivoLower.includes('estrella')) {
+    marca = "Estrella";
+  }
+ if (archivoLower.includes('pm')) {
+    marca = "Para mama"; 
+  } 
 
   // Función interna para determinar el orden de los talles
   const obtenerPrioridad = (texto) => {
