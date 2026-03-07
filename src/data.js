@@ -219,7 +219,7 @@ export const productos = Object.entries(imagenes).map(([ruta, modulo], index) =>
     marca = "Algodones"; 
   } 
   if (archivoLower.includes('oleo')) {
-    marca = "Oleos"; 
+    marca = "Oleo"; 
   } 
 
 
