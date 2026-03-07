@@ -142,6 +142,11 @@ const listaPrecios = {
 
   "oleo estrella x500.jpg":7000,
   "oleo estrella x950.webp":10000,
+//toallitas
+"toallitas estrella.webp":4000,
+"toallitas qsoft.webp":3000,
+
+
 
 
   //para mama
@@ -218,10 +223,14 @@ export const productos = Object.entries(imagenes).map(([ruta, modulo], index) =>
   if (archivoLower.includes('algodon')) {
     marca = "Algodones"; 
   } 
-  if (archivoLower.includes('oleo')) {
+  
+  
+if (archivoLower.includes('ole')) {
     marca = "Oleo"; 
   } 
-
+  if (archivoLower.includes('toallitas')) {
+    marca = "Toallitas"; 
+  } 
 
   // Función interna para determinar el orden de los talles
   const obtenerPrioridad = (texto) => {
