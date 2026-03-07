@@ -218,6 +218,10 @@ export const productos = Object.entries(imagenes).map(([ruta, modulo], index) =>
   if (archivoLower.includes('algodon')) {
     marca = "Algodones"; 
   } 
+  if (archivoLower.includes('oleo')) {
+    marca = "Oleos"; 
+  } 
+
 
   // Función interna para determinar el orden de los talles
   const obtenerPrioridad = (texto) => {
