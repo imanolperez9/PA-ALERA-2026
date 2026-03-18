@@ -205,7 +205,23 @@ const nombresAMano = {
 "pm toallitas fem.webp":"toallitas",
 "pm pezonera nuk.webp":"pezonera nuk",
 "pm pezonera chicco.webp":"pezonera chicco",
-  
+   "higiene aceite jhonson.webp" :" aceite jhonson",
+   "higiene aspirador nasal .webp":" aspirador nasal ",
+    "higiene aspirador nasal.webp": " aspirador nasal con filtro",
+    "higiene colonia babelito.webp":"colonia babelito",
+     "higiene colonia danielle.webp": " colonia danielle",
+      "higiene colonia upa lala.webp": "colonia upa lala",
+      "higiene crema enjuage upalala.webp":" crema enjuage upa lala",
+      "higiene curitas.webp":"curitas",
+      "higiene hipoglos.webp":" hipoglos",
+      "higiene hisopos.webp":" hisopos",
+       "higiene jabon estrella.webp": " jabon estrella",
+       "higiene protector dermaglos.webp":" protector dermaglos",
+       "higiene shampo petit.webp":" shampoo petit",
+       "higiene shampoo upalala.webp":" shampoo upa lala",
+        "higiene talco upa lala.webp": "higiene talco upa lala",
+
+   
   // Podés seguir agregando todos los que necesites
 };
 
@@ -221,7 +237,7 @@ export const productos = Object.entries(imagenes).map(([ruta, modulo], index) =>
     nombreArchivo.replace(/\.(jpeg|jpg|png|webp)$/, '').replace(/([A-Z])/g, ' $1').trim();
 
   const precioTarjeta = listaPrecios[nombreArchivo] || 0;
-  const precioEfectivo = Math.round(precioTarjeta * 0.90);
+ 
 
  // DENTRO DE src/data.js (en el .map)
 
@@ -257,6 +273,17 @@ if (archivoLower.includes('ole')) {
   if (archivoLower.includes('toallitas')) {
     marca = "Toallitas"; 
   } 
+ // --- LÓGICA DE PRECIO DIFERENCIADO ---
+  // Definimos qué marcas son pañales (excluyendo categorías que no lo son)
+  const marcasPanales = ["Huggies", "Pampers", "Babysec", "Estrella"];
+  const esPanal = marcasPanales.includes(marca) && 
+                  !archivoLower.includes('oleo') && 
+                  !archivoLower.includes('toallitas') && 
+                  !archivoLower.includes('jabon');
+
+ // Si es pañal, calculamos el 10% de descuento. Si no, lo dejamos en null o 0.
+  const precioEfectivo = esPanal ? Math.round(precioTarjeta * 0.90) : null;
+
 
   // Función interna para determinar el orden de los talles
   const obtenerPrioridad = (texto) => {
@@ -281,6 +308,7 @@ if (archivoLower.includes('ole')) {
     precioTarjeta: precioTarjeta,
     imagen: modulo.default,
     marca: marca,
+    esPanal: esPanal, // Propiedad útil para el componente visual
     prioridad: obtenerPrioridad(nombreArchivo) // Usamos esto solo para el sort
   };
 }).sort((a, b) => a.prioridad - b.prioridad);

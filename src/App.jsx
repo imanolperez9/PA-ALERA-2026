@@ -19,7 +19,12 @@ function App() {
   const eliminarDelCarrito = (id) => setCarrito(carrito.filter(p => p.id !== id));
 
   // CÁLCULOS DE TOTALES DUALES
-  const totalEfectivo = carrito.reduce((sum, p) => sum + (p.precioEfectivo * p.cantidad), 0);
+  // Si el producto NO tiene precioEfectivo (es null), usamos el precioTarjeta para el total de efectivo
+  const totalEfectivo = carrito.reduce((sum, p) => {
+    const precioParaEfectivo = p.precioEfectivo !== null ? p.precioEfectivo : p.precioTarjeta;
+    return sum + (precioParaEfectivo * p.cantidad);
+  }, 0);
+
   const totalTarjeta = carrito.reduce((sum, p) => sum + (p.precioTarjeta * p.cantidad), 0);
   const cantidadTotal = carrito.reduce((sum, p) => sum + p.cantidad, 0);
 
@@ -29,7 +34,7 @@ function App() {
 
   return (
     <div className="bg-gray-100 min-h-screen p-4">
-      {/* HEADER CON BOTÓN DE CARRITO */}
+      {/* HEADER */}
       <header className="flex justify-between items-center max-w-6xl mx-auto mb-8">
         <h1 className="text-3xl font-bold text-blue-900 tracking-tight">Pañalera 2026</h1>
         <button 
@@ -67,15 +72,21 @@ function App() {
             <img src={prod.imagen} alt={prod.nombre} className="h-32 w-full object-contain mb-2" />
             <h2 className="text-sm font-semibold h-10 overflow-hidden leading-tight mb-2 uppercase">{prod.nombre}</h2>
             
-            {/* DOBLE PRECIO EN PRODUCTO */}
+            {/* PRECIOS CONDICIONALES */}
             <div className="space-y-1 mb-3 bg-gray-50 p-2 rounded-xl">
-              <div className="flex justify-between items-center">
-                <span className="text-[9px] font-black text-gray-400 uppercase">Efectivo</span>
-                <span className="text-lg font-black text-green-600">${prod.precioEfectivo.toLocaleString()}</span>
-              </div>
-              <div className="flex justify-between items-center border-t border-gray-200 pt-1">
+              {/* Solo mostramos la fila de Efectivo si existe precioEfectivo (es pañal) */}
+              {prod.precioEfectivo && (
+                <div className="flex justify-between items-center">
+                  <span className="text-[9px] font-black text-gray-400 uppercase">Efectivo</span>
+                  <span className="text-lg font-black text-green-600">${prod.precioEfectivo.toLocaleString()}</span>
+                </div>
+              )}
+              
+              <div className={`flex justify-between items-center ${prod.precioEfectivo ? 'border-t border-gray-200 pt-1' : ''}`}>
                 <span className="text-[9px] font-black text-gray-400 uppercase">Tarjeta</span>
-                <span className="text-sm font-bold text-blue-800">${prod.precioTarjeta.toLocaleString()}</span>
+                <span className={`${prod.precioEfectivo ? 'text-sm font-bold text-blue-800' : 'text-lg font-black text-blue-800'}`}>
+                  ${prod.precioTarjeta.toLocaleString()}
+                </span>
               </div>
             </div>
 
@@ -89,7 +100,7 @@ function App() {
         ))}
       </div>
 
-      {/* CARRITO LATERAL (SIDEBAR) */}
+      {/* CARRITO LATERAL */}
       {carritoAbierto && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end">
           <div className="bg-white w-full max-w-md h-full p-6 shadow-xl flex flex-col">
@@ -106,7 +117,10 @@ function App() {
                       <img src={p.imagen} className="w-12 h-12 object-contain" />
                       <div>
                         <p className="text-xs font-bold leading-tight">{p.nombre}</p>
-                        <p className="text-[10px] text-gray-500">{p.cantidad} x ${p.precioEfectivo.toLocaleString()} (Efec.)</p>
+                        <p className="text-[10px] text-gray-500">
+                          {p.cantidad} x ${p.precioTarjeta.toLocaleString()} 
+                          {p.precioEfectivo && ` (Efec: $${p.precioEfectivo.toLocaleString()})`}
+                        </p>
                       </div>
                     </div>
                     <button onClick={() => eliminarDelCarrito(p.id)} className="text-red-500 text-xs font-bold cursor-pointer hover:underline">Quitar</button>
@@ -115,7 +129,7 @@ function App() {
               }
             </div>
 
-            {/* SECCIÓN DE TOTALES DUALES */}
+            {/* SECCIÓN DE TOTALES */}
             <div className="border-t pt-4 space-y-3 bg-gray-50 p-4 rounded-t-3xl">
               <div className="flex justify-between items-end">
                 <div>
@@ -128,11 +142,9 @@ function App() {
                 </div>
               </div>
 
-            
-
               <button 
                 onClick={() => setCarrito([])} 
-                className="w-full bg-green-600 text-white py-4 rounded-2xl font-bold text-lg cursor-pointer hover:bg-green-700 transition-all active:scale-95 shadow-lg"
+                className="w-full bg-red-500 text-white py-4 rounded-2xl font-bold text-lg cursor-pointer hover:bg-red-600 transition-all active:scale-95 shadow-lg"
               >
                 Vaciar carrito
               </button>
