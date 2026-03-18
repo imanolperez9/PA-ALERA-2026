@@ -165,7 +165,31 @@ const listaPrecios = {
 "algodon estrella x300.webp":4000,
 
 
+  //higieene
+  "higiene aceite jhonson.webp":10000,
   
+  "higiene aspirador nasal .webp":13000,
+  "higiene aspirador nasal.webp":20000,
+  
+  
+
+  "higiene colonia babelito.webp":15000,
+  "higiene colonia danielle.webp":14000,
+  "higiene colonia upa lala.webp":6000,
+
+ "higiene crema enjuage upalala.webp":5000,
+
+ "higiene curitas.webp":1000,
+ "higiene hipoglos.webp":12000,
+ "higiene hisopos.webp":2000,
+ "higiene jabon estrella.webp":2000,
+ "higiene protector dermaglos.webp":10000,
+
+ "higiene shampo petit.webp":8000,
+ "higiene shampoo upalala.webp":5000,
+
+ "higiene talco upa lala.webp":5000,
+
 
 
 };
@@ -224,7 +248,9 @@ export const productos = Object.entries(imagenes).map(([ruta, modulo], index) =>
     marca = "Algodones"; 
   } 
   
-  
+  if (archivoLower.includes('higiene')) {
+    marca = "Higiene"; 
+  } 
 if (archivoLower.includes('ole')) {
     marca = "Oleo"; 
   } 
