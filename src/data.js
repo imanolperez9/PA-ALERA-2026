@@ -174,7 +174,9 @@ const listaPrecios = {
   
 
   "higiene colonia babelito.webp":15000,
-  "higiene colonia danielle.webp":14000,
+  "higiene colonia babelito x200.webp":13000,
+  "higiene colonia petit.webp":15000,
+  "higiene colonia danielle.webp":15000,
   "higiene colonia upa lala.webp":6000,
 
  "higiene crema enjuage upalala.webp":5000,
@@ -220,6 +222,8 @@ const nombresAMano = {
        "higiene shampo petit.webp":" shampoo petit",
        "higiene shampoo upalala.webp":" shampoo upa lala",
         "higiene talco upa lala.webp": "higiene talco upa lala",
+        "higiene colonia babelito x200.webp":" colonia babelito x200",
+        "higiene colonia petit.webp":" colonia petit",
 
    
   // Podés seguir agregando todos los que necesites
