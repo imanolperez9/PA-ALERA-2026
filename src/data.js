@@ -206,6 +206,7 @@ const listaPrecios = {
 "mamadera nuby .webp":10000,
 "mamadera nuk temperatura x150.webp":23000,
 "mamadera nuk temperatura x300.webp":25000,
+"mamadera loopi.webp":10000,
 
 //chupetes
 "chupete avent transparente.webp":15000,
@@ -269,6 +270,7 @@ const nombresAMano = {
         "mamadera nuby .webp":"nuby x240",
         "mamadera nuk temperatura x150.webp":"nuk temperatura x150",
         "mamadera nuk temperatura x300.webp":"nuk temperatura x300",
+        "mamadera loopi.webp":"loopi",
 
 
 
