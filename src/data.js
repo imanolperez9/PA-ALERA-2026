@@ -194,6 +194,34 @@ const listaPrecios = {
 
 
 
+ // mamaderas
+"mamadera avent.webp":20000,
+"mamadera babelito.webp":8000,
+"mamadera baby bee con.webp":10000,
+"mamadera baby bee sin.webp":8000,
+"mamadera chicco de vidrio.webp":31000,
+"mamadera chicco pezonera r.n.webp":25000,
+"mamadera chicco x150.webp":18000,
+"mamadera chicco x330.webp":22000,
+"mamadera nuby .webp":10000,
+"mamadera nuk temperatura x150.webp":23000,
+"mamadera nuk temperatura x300.webp":25000,
+
+//chupetes
+"chupete avent transparente.webp":15000,
+"chupete avent.webp":15000,
+"chupete babelito.webp":8000,
+"chupete baby bee.webp":5000,
+"chupete chicco .webp":9000,
+"chupete disney.webp":5000,
+"chupete loopi.webp":5000,
+"chupete nuby.webp":8000,
+"chupete nuk .webp":10000,
+"chupete nuk luminoso.webp":15000,
+"chupete vaita.webp":5000,
+
+
+
 };
 
 // --- EDITÁ ACÁ LOS NOMBRES QUE QUIERAS CAMBIAR ---
@@ -202,11 +230,15 @@ const nombresAMano = {
   "huggiesM-GSPLASH.jpeg": "Huggies Splashers Talle M",
   "huggiesM68.jpeg": "Huggies Flexi Comfort M x 68",
   "pampersRN36.jpeg": "Pampers RN Confort x 36",
+
+
   "pm aposito post parto.webp":"aposito post parto",
 "pm protector mamario.webp": "protector mamario",
 "pm toallitas fem.webp":"toallitas",
 "pm pezonera nuk.webp":"pezonera nuk",
 "pm pezonera chicco.webp":"pezonera chicco",
+
+
    "higiene aceite jhonson.webp" :" aceite jhonson",
    "higiene aspirador nasal .webp":" aspirador nasal ",
     "higiene aspirador nasal.webp": " aspirador nasal con filtro",
@@ -224,6 +256,38 @@ const nombresAMano = {
         "higiene talco upa lala.webp": "higiene talco upa lala",
         "higiene colonia babelito x200.webp":" colonia babelito x200",
         "higiene colonia petit.webp":" colonia petit",
+
+
+        "mamadera avent.webp": "avent x260",
+        "mamadera babelito.webp": "babelito",
+        "mamadera baby bee con.webp":"baby bee manija",
+        "mamadera baby bee sin.webp":"baby bee ",
+        "mamadera chicco de vidrio.webp":"chicco de vidrio",
+        "mamadera chicco pezonera r.n.webp":"chicco pezonera rn",
+        "mamadera chicco x150.webp":"chicco x150",
+        "mamadera chicco x330.webp":"chicco x330",
+        "mamadera nuby .webp":"nuby x240",
+        "mamadera nuk temperatura x150.webp":"nuk temperatura x150",
+        "mamadera nuk temperatura x300.webp":"nuk temperatura x300",
+
+
+
+
+        "chupete avent transparente.webp":"avent transparente",
+        "chupete avent.webp":"avent",
+        "chupete babelito.webp":"babelito",
+        "chupete baby bee.webp":"baby bee",
+        "chupete chicco .webp":"chicco",
+        "chupete disney.webp":"disney",
+        "chupete loopi.webp":"loopi",
+        "chupete nuby.webp":"nuby",
+        "chupete nuk .webp":"nuk",
+        "chupete nuk luminoso.webp":"nuk luminoso",
+        "chupete vaita.webp":"vaita",
+
+
+
+
 
    
   // Podés seguir agregando todos los que necesites
@@ -277,6 +341,16 @@ if (archivoLower.includes('ole')) {
   if (archivoLower.includes('toallitas')) {
     marca = "Toallitas"; 
   } 
+ if (archivoLower.includes('mamadera')) {
+    marca = "Mamaderas"; 
+  } 
+  if (archivoLower.includes('chupete')) {
+    marca = "Chupetes"; 
+  } 
+
+
+
+
  // --- LÓGICA DE PRECIO DIFERENCIADO ---
   // Definimos qué marcas son pañales (excluyendo categorías que no lo son)
   const marcasPanales = ["Huggies", "Pampers", "Babysec", "Estrella"];
