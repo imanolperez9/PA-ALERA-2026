@@ -63,7 +63,7 @@ const listaPrecios = {
   
 // PAMPERS
 "pampersRN36.jpeg": 20000,
-"pampers deluxe rn+.webp":22000,
+"pampers deluxe rn+.webp":20000,
 "pampers deluxe p x36.webp":20000,
 
 
@@ -141,7 +141,7 @@ const listaPrecios = {
   // oleos
 
   "oleo estrella x500.jpg":7000,
-  "oleo estrella x950.webp":10000,
+  "oleo estrella x950.webp":11000,
 //toallitas
 "toallitas estrella.webp":4000,
 "toallitas qsoft.webp":3000,
