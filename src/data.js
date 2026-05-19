@@ -4,7 +4,7 @@ const imagenes = import.meta.glob('./img/*.{png,jpg,jpeg,webp}', { eager: true }
 const listaPrecios = {
   // HUGGIES
 
-"huggies pr .webp": 17000,
+"huggies pr .webp": 18000,
 "huggiesP.jpeg": 9000,
 
 
@@ -19,15 +19,15 @@ const listaPrecios = {
 "huggies azul px30.webp":11000,
 "huggiesP50.jpeg": 14000,
 
-"huggies azul m.webp":20000 ,
-"huggies azul g.webp":20000 ,
-"huggies azul xg.webp":20000 ,
-"huggies azul xxg.webp":20000 ,
-"huggies azul xxxg.webp":20000 ,
+"huggies azul m.webp":21000 ,
+"huggies azul g.webp":21000 ,
+"huggies azul xg.webp":21000 ,
+"huggies azul xxg.webp":21000 ,
+"huggies azul xxxg.webp":21000 ,
 
 
-  "huggiesRN.jpeg": 17000,
-"huggies rojo p x50.webp":22000,
+  "huggiesRN.jpeg": 18000,
+"huggies rojo p x50.webp":23000,
 
 
 "huggiesM.jpeg":30000,
@@ -37,8 +37,8 @@ const listaPrecios = {
 "huggiesXXXG.jpeg":30000,
 
 
-"huggies verde rn.webp":15000,
-"huggies verde p x50.webp":19000,
+"huggies verde rn.webp":16000,
+"huggies verde p x50.webp":20000,
 
 
 "huggies verde m.webp":26000,
@@ -75,7 +75,7 @@ const listaPrecios = {
 
 
 "pampersRN.jpeg": 17000,
-"pampers dry p.webp":21000,
+"pampers dry p.webp":22000,
 
 
 "pampers dry m x72.webp":31000,
@@ -108,7 +108,7 @@ const listaPrecios = {
 "babysec v xxg x30.webp":13000,
 "babysec v xxg x44.webp":19000,
 
-
+//celeste
 
 "babysec m x48.webp":11000,
 "babysec m x68.webp":17000,
@@ -126,15 +126,15 @@ const listaPrecios = {
   "estrella p.webp":10000,
   
   
-  "estrella m x44.webp":13000,
-  "estrella g x40.webp":13000,
-  "estrella g x60.webp":21000,
-  "estrella xg x36.webp":13000,
-  "estrella xg x52.webp":21000,
-  "estrella xxg x34.webp":13000,
-  "estrella xxg x50.webp":21000,
-  "estrella j x30.webp":13000,
-  "estrella j x50.webp":21000,
+  "estrella m x44.webp":14000,
+  "estrella g x40.webp":14000,
+  "estrella g x60.webp":22000,
+  "estrella xg x36.webp":14000,
+  "estrella xg x52.webp":22000,
+  "estrella xxg x34.webp":14000,
+  "estrella xxg x50.webp":22000,
+  "estrella j x30.webp":14000,
+  "estrella j x50.webp":22000,
 
 
 
@@ -162,7 +162,7 @@ const listaPrecios = {
 "algodon estrella discos.webp":3000,
 "algodon estrella precortado.webp":2000,
 "algodon estrella x140.webp":2000,
-"algodon estrella x300.webp":4000,
+"algodon estrella x300.webp":5000,
 
 
   //higieene
@@ -196,7 +196,7 @@ const listaPrecios = {
 
  // mamaderas
 "mamadera avent.webp":20000,
-"mamadera babelito.webp":8000,
+"mamadera babelito.webp":10000,
 "mamadera baby bee con.webp":10000,
 "mamadera baby bee sin.webp":8000,
 "mamadera chicco de vidrio.webp":31000,
@@ -227,7 +227,7 @@ const listaPrecios = {
 
 // --- EDITÁ ACÁ LOS NOMBRES QUE QUIERAS CAMBIAR ---
 const nombresAMano = {
-  "huggiesG.jpeg": "Huggies Classic G x 40",
+  "huggiesG.jpeg": "Huggies Classic G x 60",
   "huggiesM-GSPLASH.jpeg": "Huggies Splashers Talle M",
   "huggiesM68.jpeg": "Huggies Flexi Comfort M x 68",
   "pampersRN36.jpeg": "Pampers RN Confort x 36",
