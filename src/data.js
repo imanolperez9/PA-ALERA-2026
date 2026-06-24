@@ -41,11 +41,11 @@ const listaPrecios = {
 "huggies verde p x50.webp":20000,
 
 
-"huggies verde m.webp":26000,
-"huggies verde g.webp":26000,
-"huggies verde xg.webp":26000,
-"huggies verde xxg.webp":26000,
-"huggies verde xxxg.webp":26000,
+"huggies verde m.webp":27000,
+"huggies verde g.webp":27000,
+"huggies verde xg.webp":27000,
+"huggies verde xxg.webp":27000,
+"huggies verde xxxg.webp":27000,
 
 
 
@@ -91,8 +91,8 @@ const listaPrecios = {
   "pampersXGSPLASH.jpeg":10000 ,
   // BABYSEC
 
-"babysec pants xg.webp":13000,
-"babysec pants xxg.webp":13000,
+"babysec pants xg.webp":16000,
+"babysec pants xxg.webp":16000,
 
 
 
@@ -102,11 +102,11 @@ const listaPrecios = {
 
 "babysec v m x48.webp":13000,
 "babysec v g x40.webp":13000,
-"babysec v g x60.webp":19000,
+"babysec v g x60.webp":20000,
 "babysec v xg x32.webp":13000,
-"babysec v xg x48.webp":19000,
+"babysec v xg x48.webp":20000,
 "babysec v xxg x30.webp":13000,
-"babysec v xxg x44.webp":19000,
+"babysec v xxg x44.webp":20000,
 
 //celeste
 
