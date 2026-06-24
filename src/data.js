@@ -47,6 +47,8 @@ const listaPrecios = {
 "huggies verde xxg.webp":27000,
 "huggies verde xxxg.webp":27000,
 
+"higgies verde pants xxg x24.webp":16000,
+
 
 
 
@@ -230,6 +232,7 @@ const nombresAMano = {
   "huggiesG.jpeg": "Huggies Classic G x 60",
   "huggiesM-GSPLASH.jpeg": "Huggies Splashers Talle M",
   "huggiesM68.jpeg": "Huggies Flexi Comfort M x 68",
+  "higgies verde pants xxg x24.webp":"Huggies Verde Pants XXG x 24",
   "pampersRN36.jpeg": "Pampers RN Confort x 36",
 
 
