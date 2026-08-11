@@ -5,29 +5,29 @@ const listaPrecios = {
   // HUGGIES
 
 "huggies pr .webp": 18000,
-"huggiesP.jpeg": 9000,
+"huggiesP.jpeg": 10000,
 
 
 
-"huggiesM68.jpeg" :20000 ,
-"huggies amarillo g.webp" :20000 ,
-"huggies amarillo xg.webp" :20000 ,
-"huggiesXXG.jpeg": 20000 ,
-"huggies amarillo xxxg.webp" :20000 ,
+"huggiesM68.jpeg" :22000 ,
+"huggies amarillo g.webp" :22000 ,
+"huggies amarillo xg.webp" :22000 ,
+"huggiesXXG.jpeg": 22000 ,
+"huggies amarillo xxxg.webp" :22000 ,
 
 
-"huggies azul px30.webp":11000,
-"huggiesP50.jpeg": 14000,
 
-"huggies azul m.webp":21000 ,
-"huggies azul g.webp":21000 ,
-"huggies azul xg.webp":21000 ,
-"huggies azul xxg.webp":21000 ,
-"huggies azul xxxg.webp":21000 ,
+"huggiesP50.jpeg": 15000,
+
+"huggies azul m.webp":24000 ,
+"huggies azul g.webp":24000 ,
+"huggies azul xg.webp":24000 ,
+"huggies azul xxg.webp":24000 ,
+"huggies azul xxxg.webp":24000 ,
 
 
-  "huggiesRN.jpeg": 18000,
-"huggies rojo p x50.webp":23000,
+  "huggiesRN.jpeg": 19000,
+"huggies rojo p x50.webp":24000,
 
 
 "huggiesM.jpeg":30000,
@@ -38,16 +38,16 @@ const listaPrecios = {
 
 
 "huggies verde rn.webp":16000,
-"huggies verde p x50.webp":20000,
+"huggies verde p x50.webp":21000,
 
 
-"huggies verde m.webp":27000,
-"huggies verde g.webp":27000,
-"huggies verde xg.webp":27000,
-"huggies verde xxg.webp":27000,
-"huggies verde xxxg.webp":27000,
+"huggies verde m.webp":28000,
+"huggies verde g.webp":28000,
+"huggies verde xg.webp":28000,
+"huggies verde xxg.webp":28000,
+"huggies verde xxxg.webp":28000,
 
-"huggies verde pants xxg x24.webp":16000,
+"huggies verde pants xxg x24.webp":18000,
 
 
 
@@ -93,8 +93,8 @@ const listaPrecios = {
   "pampersXGSPLASH.jpeg":10000 ,
   // BABYSEC
 
-"babysec pants xg.webp":16000,
-"babysec pants xxg.webp":16000,
+"babysec pants xg.webp":18000,
+"babysec pants xxg.webp":18000,
 
 
 
@@ -102,24 +102,24 @@ const listaPrecios = {
 "babysec p x30.webp":13000,
 
 
-"babysec v m x48.webp":13000,
-"babysec v g x40.webp":13000,
-"babysec v g x60.webp":20000,
-"babysec v xg x32.webp":13000,
-"babysec v xg x48.webp":20000,
-"babysec v xxg x30.webp":13000,
-"babysec v xxg x44.webp":20000,
+"babysec v m x48.webp":15000,
+"babysec v g x40.webp":15000,
+"babysec v g x60.webp":23000,
+"babysec v xg x32.webp":15000,
+"babysec v xg x48.webp":23000,
+"babysec v xxg x30.webp":15000,
+"babysec v xxg x44.webp":23000,
 
 //celeste
 
-"babysec m x48.webp":11000,
-"babysec m x68.webp":17000,
-"babysec g x40.webp":11000,
-"babysec g x60.webp":17000,
-"babysec xg x32.webp":11000,
-"babysec xg x52.webp":17000,
-"babysec xxg x30.webp":11000,
-"babysec xxg x50.webp":17000,
+"babysec m x48.webp":13000,
+"babysec m x68.webp":20000,
+"babysec g x40.webp":13000,
+"babysec g x60.webp":20000,
+"babysec xg x32.webp":13000,
+"babysec xg x52.webp":20000,
+"babysec xxg x30.webp":13000,
+"babysec xxg x50.webp":20000,
 
 
 
